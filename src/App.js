@@ -6,7 +6,8 @@ import Nav from './components/nav';
 
 function App() {
   return (
-    <div>
+    
+    <div className='bg-black'>
       <Nav />    
       <Main />
       
