@@ -9,7 +9,9 @@ module.exports = {
       lg: '960px',
       xl: '1200px',
     },
-    extend: {},
+    extend: { backgroundImage: {
+      'site': "url('C:/Users/Karan Sharma/Documents/GitHub/SpendWise.io/src/assets/bg.png')",
+    }},
   },
   plugins: [
     require('flowbite/plugin')

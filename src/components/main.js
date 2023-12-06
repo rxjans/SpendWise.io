@@ -8,6 +8,7 @@ import Login from '../Pages/Login';
 import Monthly from '../Pages/Monthly';
 import Weekly from '../Pages/Weekly';
 import Yearly from '../Pages/Yearly';
+import bg from '../assets/bg.jpg';
 
 const main = () => {
   return (
@@ -26,13 +27,13 @@ const main = () => {
                      </button>
 
 
-                    <div id="dropdown" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-[280px] dark:bg-gray-700">
-                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                    <div id="dropdown" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-[280px]">
+                     <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownDefaultButton">
                     <li>
-                        <a href="/categories" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Categories</a>
+                        <a href="/categories" className="block px-4 py-2 hover:bg-gray-100">Categories</a>
                     </li>
                     <li>
-                        <a href="/expense" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Add Expenses</a>
+                        <a href="/expense" className="block px-4 py-2 hover:bg-gray-100">Add Expenses</a>
                     </li>
                     </ul>
                 </div>
@@ -42,19 +43,20 @@ const main = () => {
       </div>
 
       {/* right division */}
-      <div className='h-screen w-[810]'>
-        <BrowserRouter>
-          <Routes>
-            <Route index element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/categories" element={<Categories />} />
-            <Route path="/expense" element={<Expenses />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/monthly" element={<Monthly />} />
-            <Route path="/weekly" element={<Weekly />} />
-            <Route path="/yearly" element={<Yearly />} />
-          </Routes>
-        </BrowserRouter>
+      <div className='flex-1 w-full h-screen'>
+          <BrowserRouter>
+            <Routes>
+              <Route index element={<Home />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/categories" element={<Categories />} />
+              <Route path="/expense" element={<Expenses />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/monthly" element={<Monthly />} />
+              <Route path="/weekly" element={<Weekly />} />
+              <Route path="/yearly" element={<Yearly />} />
+            </Routes>
+         </BrowserRouter>
+  
       </div>
     </div>
   )
